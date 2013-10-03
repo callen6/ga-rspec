@@ -18,4 +18,8 @@ describe '#square' do # use the # symbol because it indicates it's an instance m
 		# keep writing on own
 	end
 
+	it "should raise and error when non-number passed as parameter" do 
+		expect{square("cat")}.to raise_error(TypeError) # NoMethodError if x ** 2 in math.rb
+		expect{square(true)}.to raise_error(NoMethodError)
+	end
 end
